@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link href="/public/js/slider/bee3D.min.css" rel="stylesheet">
+        {{#if options.developmentMode}}
+            <link rel="stylesheet" href="{{baseURI}}/public/css/main.build.css">
+        {{else}}
+            <link rel="stylesheet" href="{{baseURI}}/public/css/main.build.min.css">
+        {{/if}}
+        
+        
+        {{#if options.developmentMode}}
+            <script src="{{baseURI}}/public/js/main.build.js"></script>
+        {{else}}
+            <script src="{{baseURI}}/public/js/main.build.min.js"></script>
+        {{/if}}
+        <script src="{{baseURI}}/public/js/jquery.toast.min.js"></script>
+    
+        {{#> head-block}}
+            {{!-- Custom <head> content per page could be added. --}}
+        {{/head-block}}
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                {{#> content}}
+                {{!-- Content goes here. --}}
+                {{/content}}
+                <a href="/" class="home-page"></a>
+            </div>
+        </div>
+        
+        {{#> scripts-block}}
+            {{!-- Custom scripts per page can be added. --}}
+        {{/scripts-block}}
+    </body>
+</html>

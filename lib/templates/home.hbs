@@ -1,0 +1,22 @@
+{{#> layout title="Home" }}
+
+    {{#*inline "content"}}
+        <div class="my-flipster bee3D--parent" id="demo" data-total="{{total}}">
+            {{#each files}}
+                <section class="bee3D--slide wrap-card">
+                    <div style="background: url(public/upload/{{this}}) no-repeat 50% 50%;
+    background-size: cover;" class="image" data-image-url="{{this}}">
+                    </div>
+                </section>
+            {{/each}}
+        </div>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script src="/public/js/slider/dependencies/classie.js"></script>
+        <script src="/public/js/slider/bee3D.min.js"></script>
+        {{!-- <script src="/public/js/luckydraw.js"></script> --}}
+        <script src="/public/js/luckydraw.js"></script>
+    {{/inline}}
+
+{{/layout}}

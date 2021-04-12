@@ -1,0 +1,81 @@
+{{#> layout title="Upload Minh" }}
+
+    {{#*inline "content"}}
+        <div class="upload-container">
+            <h3>Upload Gallery</h3>
+            <div>
+                <form action="/upload-gallery" method="POST" enctype="multipart/form-data">
+                    <label for="myfile">Select a file:</label>
+                    <input type="file" id="myfile" name="images" multiple='true' accept="image/*" >
+                    <input type="submit" value="Upload" class="submit">
+                </form>
+                <div class="buttons">
+                    <a href="/" class="btn-start btn">Start</a>
+                    <span class="reset btn">Reset</span>
+                </div>
+            </div>
+        </div>
+        
+        
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="application/javascript">
+            $("form").submit(function(e) {
+                e.preventDefault();    
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    success: function (data) {
+                        $.toast({ 
+                            text : data.message, 
+                            showHideTransition : 'slide',  
+                            bgColor : '#0184ff',             
+                            textColor : '#fff',            
+                            allowToastClose : false,       
+                            hideAfter : 5000,             
+                            stack : 5,                    
+                            textAlign : 'left',          
+                            position : 'top-right' 
+                        })
+                    },
+                    error: function(data){
+                        $.toast({ 
+                            text : 'ERROR!', 
+                            showHideTransition : 'slide',  
+                            bgColor : '#0184ff',             
+                            textColor : '#fff',            
+                            allowToastClose : false,       
+                            hideAfter : 5000,             
+                            stack : 5,                    
+                            textAlign : 'left',          
+                            position : 'top-right' 
+                        })
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                });
+            });
+
+            $('.reset').on('click', function(){
+                localStorage.removeItem("winners");
+                $.toast({ 
+                    text : 'Reset Complete', 
+                    showHideTransition : 'slide',  
+                    bgColor : '#0184ff',             
+                    textColor : '#fff',            
+                    allowToastClose : false,       
+                    hideAfter : 2000,             
+                    stack : 5,                    
+                    textAlign : 'left',          
+                    position : 'top-right' 
+                })
+            })
+        </script>
+    {{/inline}}
+
+{{/layout}}

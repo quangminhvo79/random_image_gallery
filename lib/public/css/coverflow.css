@@ -1,0 +1,55 @@
+
+.bee3D--effect__coverflow .bee3D--before {
+    -webkit-transform: translateX(-430px) rotateY(45deg) scale(.6);
+    transform: translateX(-430px) rotateY(45deg) scale(.6);
+    z-index: 6;
+    opacity: 1;
+}
+
+.bee3D--effect__coverflow .bee3D--after {
+    -webkit-transform: translateX(430px) rotateY(-45deg) scale(.6);
+    transform: translateX(430px) rotateY(-45deg) scale(.6);
+    z-index: 6;
+    opacity: 1;
+}
+
+.bee3D--effect__coverflow .bee3D--before-1{
+    -webkit-transform: translateX(-190px) rotateY(45deg) scale(.7);
+    transform: translateX(-190px) rotateY(45deg) scale(.7);
+    opacity: 1;
+    z-index: 9;
+}
+.bee3D--effect__coverflow .bee3D--after-1{
+    -webkit-transform: translateX(190px) rotateY(-45deg) scale(.7);
+    transform: translateX(190px) rotateY(-45deg) scale(.7);
+    opacity: 1;
+    z-index: 9;
+}
+
+.bee3D--effect__coverflow .bee3D--before-2 {
+    -webkit-transform: translateX(-310px) rotateY(45deg) scale(.65);
+    transform: translateX(-310px) rotateY(45deg) scale(.65);
+    opacity: 1;
+    z-index: 8;
+}
+
+.bee3D--effect__coverflow .bee3D--after-2 {
+    -webkit-transform: translateX(310px) rotateY(-45deg) scale(.65);
+    transform: translateX(310px) rotateY(-45deg) scale(.65);
+    opacity: 1;
+    z-index: 8;
+}
+
+.bee3D--effect__coverflow .bee3D--before-3 {
+    -webkit-transform: translateX(-430px) rotateY(45deg) scale(.6);
+    transform: translateX(-430px) rotateY(45deg) scale(.6);
+    opacity: 1;
+    z-index: 7;
+}
+
+.bee3D--effect__coverflow .bee3D--after-3 {
+    -webkit-transform: translateX(430px) rotateY(-45deg) scale(.6);
+    transform: translateX(430px) rotateY(-45deg) scale(.6);
+    opacity: 1;
+    z-index: 7;
+}

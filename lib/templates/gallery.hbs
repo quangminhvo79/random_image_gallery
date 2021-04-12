@@ -1,0 +1,56 @@
+{{#> layout title="Home" }}
+
+    {{#*inline "content"}}
+        <div class="gallery">
+            <div class="gallery-content">
+                {{#each files}}
+                    <div class="img-item">
+                        <span class="remove" data-image-url="{{this}}">X</span>
+                        <img src="/public/upload/{{this}}" alt="">
+                    </div>
+                {{/each}}
+            </div>
+            
+        </div>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="application/javascript">
+            $(function(){
+                $('.remove').on('click', function(){
+                    let imgUrl = $(this).data('imageUrl');
+                    console.log(imgUrl);
+                    
+                     $.ajax({
+                        url: '/remove_image',
+                        type: 'POST',
+                        data: { imgUrl: imgUrl },
+                        success: (data) => {
+                            if(data.success){
+                                $.toast({ 
+                                    text : 'Removed!', 
+                                    bgColor : '#0184ff',             
+                                    textColor : '#fff',              
+                                    hideAfter : 2000,     
+                                    position : 'top-right' 
+                                })
+                                $(this).parent('.img-item').remove();
+                            }else{
+                                $.toast({ 
+                                    text : 'Error!', 
+                                    bgColor : '#d81818',             
+                                    textColor : '#fff',              
+                                    hideAfter : 2000,     
+                                    position : 'top-right' 
+                                })
+                            }
+                            
+                        }
+                    });
+
+                })
+            })
+        </script>
+    {{/inline}}
+
+{{/layout}}

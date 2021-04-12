@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bee3D Slider</title>
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="cleartype" content="on">
+
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Oxygen:700,400" rel="stylesheet">
+
+  <link rel="stylesheet" href="bee3D.min.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+</head>
+
+<body>
+  
+  <div class="intro-text">
+    <h1>Effect: Carousel</h1>
+    <h3>Quick Description or Example Code?</h3>
+  </div>
+
+  <article class="example">
+    <section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">1</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">2</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">3</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">4</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">5</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">6</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">7</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">8</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">9</p>
+  </div>
+</section>
+<section class="bee3D--slide">
+  <div class="bee3D--inner">
+    <p class="demo-text">10</p>
+  </div>
+</section>
+
+    <!-- Navigation Arrows -->
+<span class="bee3D--nav bee3D--nav__prev"></span>
+<span class="bee3D--nav bee3D--nav__next"></span>
+
+  </article>
+
+  <a id="lukeed" href="http://www.lukeed.com" rel="follow" target="_blank">LUKE'ED DESIGN<span></span></a>
+
+  <script src="dependencies/classie.js"></script>
+  <script src="bee3D.js"></script>
+
+  <script>
+    var element = document.querySelector('.example');
+
+    var slider = new Bee3D(element, {
+      effect: 'carousel',
+      listeners: {
+        keys: true
+      },
+      navigation: {
+        enabled: true
+      }
+    });
+  </script>
+
+</body>
+</html>
