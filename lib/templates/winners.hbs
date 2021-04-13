@@ -1,0 +1,35 @@
+{{#> layout title="Home" }}
+
+    {{#*inline "content"}}
+        <div class="gallery">
+            <div class="winner-content">
+                
+            </div>
+        </div>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="application/javascript">
+            function getWinners(){
+                let listWorker = localStorage.getItem("winners");
+                if (listWorker) {
+                    return JSON.parse(listWorker);
+                }
+                return [];
+            }
+
+            $(function(){
+                var list = getWinners();
+                var winners = list.slice(list.length - 5)
+                for(var i = 0; i < winners.length; i++){
+                    $( ".winner-content" ).append(
+                        '<div class="img-item">' +
+                            '<img src="/public/upload/' + winners[i] + '" alt="">' +
+                        '</div>'
+                    )
+                }
+            })
+        </script>
+    {{/inline}}
+
+{{/layout}}

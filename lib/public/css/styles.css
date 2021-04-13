@@ -69,7 +69,7 @@ body{
     transition: transform 1s ease-in;
 }
 .winner-effect{
-    transform: scale(1.6);
+    transform: translateY(1vw) scale(1.6);
     border: 2px solid #fff;
     border-radius: 10px;
 }
@@ -80,8 +80,10 @@ body{
     height: 100%;
 }
 .wrap-card{
-    width: 25vw;
-    height: calc(25vw * 0.75);
+    /* width: 25vw;
+    height: calc(25vw * 0.75); */
+    width: calc(0.462 * 20vw);
+    height: 20vw;
 }
 .gallery{
     display: flex;
@@ -93,6 +95,10 @@ body{
 }
 .gallery-content{
     width: 60vw;
+}
+.winner-content{
+    width: 60vw;
+    margin-right: 7vw;
 }
 .gallery img{
     width: 12vw;
@@ -117,55 +123,71 @@ body{
     font-size: 12px;
     border: 1px solid #fff;
 }
+.gallery .winner-content img{
+    width: 9vw;
+    height: auto;
+    margin: 0px 1.5vw;
+}
 /* style slider */
 @import 'coverflow.css';
 
 .bee3D--slide{
-    margin-left: -10vw;
+    margin-left: -7vw;
     margin-top: -10vw;
 }
 
 .bee3D--effect__carousel .bee3D--after {
-    -webkit-transform: translateX(48vw) rotateY(72deg) translateX(63.4vw);
-    transform: translateX(48vw) rotateY(72deg) translateX(63.4vw);
+    -webkit-transform: translateX(32vw) rotateY(72deg) translateX(63.4vw);
+    transform: translateX(32vw) rotateY(72deg) translateX(63.4vw);
     opacity: 0;
 }
 
 .bee3D--effect__carousel .bee3D--before {
-    -webkit-transform: translateX(-48vw) rotateY(-72deg) translateX(-63.4vw);
-    transform: translateX(-48vw) rotateY(-72deg) translateX(-63.4vw);
+    -webkit-transform: translateX(-40vw) rotateY(-72deg) translateX(-63.4vw);
+    transform: translateX(-40vw) rotateY(-72deg) translateX(-63.4vw);
     opacity: 0;
 }
 
 .bee3D--effect__carousel .bee3D--after-1 {
-    -webkit-transform: translateX(13vw) rotateY(30deg) translateX(14.7vw);
-    transform: translateX(13vw) rotateY(30deg) translateX(14.7vw);
+    -webkit-transform: translateX(5vw) rotateY(24deg) translateX(6.5vw);
+    transform: translateX(5vw) rotateY(24deg) translateX(6.5vw);
     opacity: .5;
 }
 
 .bee3D--effect__carousel .bee3D--before-1 {
-    -webkit-transform: translateX(-13vw) rotateY(-30deg) translateX(-14.7vw);
-    transform: translateX(-13vw) rotateY(-30deg) translateX(-14.7vw);
+    -webkit-transform: translateX(-5.5vw) rotateY(-22deg) translateX(-6vw);
+    transform: translateX(-5.5vw) rotateY(-22deg) translateX(-6vw);
     opacity: .5;
 }
 
 .bee3D--effect__carousel .bee3D--after-2 {
-    -webkit-transform: translateX(27vw) rotateY(52deg) translateX(40vw);
-    /* transform: translateX(27vw) rotateY(52deg) translateX(40vw); */
-    transform: translateX(30vw) rotateY(51deg) translateX(43vw);
+    -webkit-transform: translateX(10.4vw) rotateY(46deg) translateX(17vw);
+    transform: translateX(10.4vw) rotateY(46deg) translateX(17vw);
     opacity: .3;
 }
 .bee3D--effect__carousel .bee3D--before-2 {
-    -webkit-transform: translateX(-27vw) rotateY(-52deg) translateX(-40vw);
-    /* transform: translateX(-27vw) rotateY(-52deg) translateX(-40vw); */
-    transform: translateX(-30.5vw) rotateY(-54deg) translateX(-41vw);
+    -webkit-transform: translateX(-10.5vw) rotateY(-38deg) translateX(-15vw);
+    transform: translateX(-10.5vw) rotateY(-38deg) translateX(-15vw);
     opacity: .3;
 }
 
+.bee3D--effect__carousel .bee3D--after-3 {
+    -webkit-transform: translateX(23.4vw) rotateY(68deg) translateX(31vw);
+    transform: translateX(23.4vw) rotateY(68deg) translateX(31vw);
+    opacity: .3;
+}
+.bee3D--effect__carousel .bee3D--before-3 {
+    -webkit-transform: translateX(-23.5vw) rotateY(-60deg) translateX(-31vw);
+    transform: translateX(-23.5vw) rotateY(-60deg) translateX(-31vw);
+    opacity: .3;
+}
 
 .bee3D--effect__carousel .bee3D--after-1,.bee3D--effect__carousel .bee3D--before-1{
     opacity: 1;
 }
 .bee3D--effect__carousel .bee3D--after-2,.bee3D--effect__carousel .bee3D--before-2{
+    opacity: 1;
+}
+.bee3D--effect__carousel .bee3D--after-3,.bee3D--effect__carousel .bee3D--before-3{
     opacity: 1;
 }

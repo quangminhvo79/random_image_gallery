@@ -9,14 +9,10 @@
             <link rel="stylesheet" href="{{baseURI}}/public/css/main.build.min.css">
         {{/if}}
         
-        
-        {{#if options.developmentMode}}
-            <script src="{{baseURI}}/public/js/main.build.js"></script>
-        {{else}}
-            <script src="{{baseURI}}/public/js/main.build.min.js"></script>
-        {{/if}}
+        <script src="{{baseURI}}/public/js/jquery.js"></script>
         <script src="{{baseURI}}/public/js/jquery.toast.min.js"></script>
-    
+        <script src="{{baseURI}}/public/js/main.build.min.js"></script>
+        
         {{#> head-block}}
             {{!-- Custom <head> content per page could be added. --}}
         {{/head-block}}
